@@ -8,14 +8,14 @@ const Home = () => {
   return (
     <div
     id="home"
-      className="h-screen w-full flex items-start text-white bg-cover bg-center pt-6"
+      className="h-[90vh] w-full flex items-start text-white bg-cover bg-center pt-6"
       style={{
         backgroundImage: `url(${WaveImage})`,
         opacity: 0.9,
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="flex flex-col items-start w-full max-w-4xl pt-48 ml-48">
+      <div className="flex flex-col items-start w-full max-w-4xl pt-60 ml-48">
         <div className="flex flex-col items-start mb-2 ml-40">
           <div className="flex gap-4">
             <a

@@ -13,7 +13,7 @@ function App() {
       <Home/>
       <div id="aboutme" classname="bg-black h-[10px]"></div>
       <AboutMe/>
-      <h2 id="history" className="text-5xl text-bg-black font-bold ml-36 text-white mt-28 scroll-offset ">
+      <h2 id="history" className="text-5xl text-bg-black font-bold ml-36 text-white  scroll-offset ">
         Experience
       </h2>
      <Timeline/>

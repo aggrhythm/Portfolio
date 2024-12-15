@@ -44,7 +44,7 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="h-screen w-full flex items-center justify-between bg-black text-white mt-40 px-10 mb-60">
+    <div className="h-screen w-full flex items-center justify-between bg-black text-white mt-40 px-10 mb-40">
 
       <div className="w-[80%] ml-8 p-8 border border-white rounded-lg shadow-lg">
 

@@ -14,6 +14,7 @@ const projects = [
       "A Generalized ticketing system with an add on feature of resale with an idea of tokenizing ticket numbers as NFTs, ensuring security and traceability using Hive Blockchain.",
     image: image1,
     link: "https://ticket-hive.vercel.app/",
+    techStack: ["React", "Tailwind CSS", "Hive Blockchain", "Firebase","Vite"],
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const projects = [
       "A Decentralized referral-driven platform that connects job seekers directly with referrers, bypassing traditional recruitment process. It incentivizes referrals through tokenized rewards managed by smart contracts.",
     image: image2,
     link: "https://re-hive.vercel.app/",
+    techStack: ["React", "Tailwind CSS", "Hive Blockchain", "Figma","Vite"],
   },
   {
     id: 3,
@@ -30,14 +32,17 @@ const projects = [
       "A virtual tutor platform that assesses the learner's understanding level at every step and curates relevant content to enhance the learning experience ensuring personalization",
     image: image3,
     link: "https://the-tutor-tank.vercel.app/",
+    techStack: ["React", "Tailwind CSS", "Python", "TensorFlow","Gemini"],
   },
   {
     id: 4,
     name: "DeepTrace",
+    techStack: ["React", "Tailwind CSS", "MatPlotlib", "PyTorch","TensorFlow"],
     description:
       "An innovative blockchain-based platform designed to combat the growing issue of deepfake videos while ensuring user privacy by seamlessly integrating ML models & blockchain to deliver a highly accurate solution for deepfake detection.",
     image: image4,
     link: "https://github.com/Divij-Mahajan/DeepTrace",
+   
   },
   {
     id: 5,
@@ -45,7 +50,8 @@ const projects = [
     description:
       "An intelligent retail platform that leverages accurate demand forecasting, dynamic pricing, and personalized promotions to optimize inventory, maximize profits, and enhance customer engagement.",
     image: image5,
-    link: "https://youtu.be/21UlDDd-bRg",
+    link: "https://github.com/codeskavy/Clover-Walmart",
+    techStack: ["Numpy", "TensorFlow", "Pandas", "MatPlotlib"],
   },
   {
     id: 6,
@@ -54,6 +60,7 @@ const projects = [
       "A beginner-friendly food ordering website design, built using only HTML and CSS, featuring smooth transitions and a visually appealing theme for an enhanced user experience.",
     image: image6,
     link: "https://delishdinehub.vercel.app/",
+    techStack: ["HTML","CSS"],
   },
 ];
 
@@ -94,7 +101,19 @@ const ProjectsGrid = () => {
                 >
                   {project.name}
                 </a>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.techStack.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-800 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:bg-pink-500"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
                 <p className="text-gray-400 mt-3">{project.description}</p>
+             
+               
               </div>
             </div>
           ))}
@@ -103,6 +122,7 @@ const ProjectsGrid = () => {
     </div>
   );
 };
+
 
 
 export default ProjectsGrid;

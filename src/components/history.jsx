@@ -99,7 +99,7 @@ const Timeline = () => {
                 : ""
             } ${index % 2 === 0 ? "text-left ml-0" : "text-right mr-0"} hover:bg-gray-200 hover:scale-105 transform transition-all duration-300 ease-in-out`}
             style={{
-              animationDelay: `${index === 0 ? "1s" : index * 0.2 + 1.1}s`,
+              animationDelay: `${index === 0 ? "0.6s" : index * 0.2 + 0.6}s`,
             }}
           >
             <div
