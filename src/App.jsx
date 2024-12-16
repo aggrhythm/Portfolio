@@ -14,11 +14,11 @@ function App() {
       <Home/>
       <div id="aboutme" classname="bg-black h-[10px]"></div>
       <AboutMe/>
-      <h2 id="history" className="text-5xl text-bg-black font-bold ml-36 text-white  scroll-offset ">
+      <h2 id="history" className="text-5xl text-bg-black font-bold lg:ml-36 md:ml-10 sm:ml-10 ml-10 text-white  scroll-offset ">
         Experience
       </h2>
      <Timeline/>
-     <h1 id="projects" className="text-5xl text-bg-black ml-40 font-bold mt-28 ml-36 text-white scroll-offset " >
+     <h1 id="projects" className="text-5xl text-bg-black ml-40 font-bold mt-28 lg:ml-36 md:ml-10 sm:ml-10 ml-10  text-white scroll-offset " >
           Projects
         </h1>
      <ProjectsGrid/>

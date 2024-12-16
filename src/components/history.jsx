@@ -37,7 +37,7 @@ const Timeline = () => {
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is visible
+      { threshold: 0.5 } 
     );
 
     const target = document.querySelector("#experience-section");
@@ -55,7 +55,7 @@ const Timeline = () => {
   return (
     <section
       id="experience-section"
-      className="relative max-w-6xl mx-auto min-h-screen pt-28 pb-10"
+      className="relative max-w-6xl mx-auto min-h-screen pt-28 pb-10 sm:pb-14 lg:pb-10"
     >
       <div className="absolute top-0 bottom-0 w-1 bg-pink-500 left-1/2 transform -translate-x-1/2"></div>
 
@@ -97,7 +97,7 @@ const Timeline = () => {
               isVisible
                 ? `animate-fadeInBox`
                 : ""
-            } ${index % 2 === 0 ? "text-left ml-0" : "text-right mr-0"} hover:bg-gray-200 hover:scale-105 transform transition-all duration-300 ease-in-out`}
+            } ${index % 2 === 0 ? "text-left ml-8" : "text-right mr-8"} hover:bg-gray-200 hover:scale-105 transform transition-all duration-300 ease-in-out`}
             style={{
               animationDelay: `${index === 0 ? "0.6s" : index * 0.2 + 0.6}s`,
             }}

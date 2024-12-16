@@ -15,7 +15,7 @@ const Home = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="flex flex-col items-start w-full max-w-4xl pt-60 ml-48">
+      <div className="flex flex-col items-start w-full max-w-4xl sm:ml-20 md:ml-20 lg:ml-48 ml-20 pt-60">
         <div className="flex flex-col items-start mb-2 ml-40">
           <div className="flex gap-4">
             <a
@@ -36,8 +36,6 @@ const Home = () => {
             </a>
           </div>
         </div>
-
-        {/* Profile and Details */}
         <div className="flex items-center gap-8">
           <div className="rounded-full mt-3 overflow-hidden w-32 h-32">
             <img
@@ -47,10 +45,10 @@ const Home = () => {
             />
           </div>
 
-          {/* Name and Title */}
+  
           <div>
-            <h1 className="text-6xl font-bold">Rhytham Aggarwal</h1>
-            <p className="text-4xl mt-4">
+            <h1 className="lg:text-6xl md:text-4xl text-3xl sm:text-4xl font-bold">Rhytham Aggarwal</h1>
+            <p className="lg:text-4xl text-2xl md:text-2xl sm:text-2xl mt-4">
               <span style={{ color: "white"}}>
                 <Typewriter
                   words={[

@@ -44,9 +44,8 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="h-screen w-full flex items-center justify-between bg-black text-white mt-40 px-10 mb-40">
-
-      <div className="w-[80%] ml-8 p-8 border border-white rounded-lg shadow-lg">
+    <div className="min-h-screen w-full flex lg:flex-row mt-20 mb-20 items-center justify-between bg-black text-white py-10 px-10">
+  <div className="lg:w-[80%] md:w-[90%] sm:w-[90%] w-[90%] lg:ml-8 md:ml-2 sm:ml-2 p-8 border border-white rounded-lg shadow-lg">
 
         <h1
           className="text-4xl font-bold mb-4 cursor-pointer"
@@ -72,7 +71,7 @@ const AboutMe = () => {
 
         <div>
           <h2 className="text-3xl mb-6 border-b border-gray-400 pb-2">Academic Achievements</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <AchievementCard
               title="Upcoming SWE Intern at Microsoft"
               description="Summer 2025"
@@ -150,17 +149,18 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col items-center gap-4 mr-16">
-        <TechIcon icon={<FaReact />} color="#61DAFB" label="React" size="50px" />
-        <TechIcon icon={<FaPython />} color="#3776AB" label="Python" size="50px" />
-        <TechIcon icon={<SiCplusplus />} color="#00599C" label="C++" size="50px" />
-        <TechIcon icon={<SiTailwindcss />} color="#06B6D4" label="TailwindCSS" size="50px" />
-        <TechIcon icon={<FaFigma />} color="#F24E1E" label="Figma" size="50px" />
-        <TechIcon icon={<FaGit />} color="#F05033" label="Git" size="50px" />
-        <TechIcon icon={<SiJavascript />} color="#F7DF1E" label="JavaScript" size="50px" />
-        <TechIcon icon={<SiTypescript />} color="#3178C6" label="TypeScript" size="50px" />
-      </div>
+      <div className="flex flex-col justify-center lg:w-[20%] md:w-[30%] sm:w-[20%] gap-4 lg:mr-8 md:mr-2 sm:mr-2 ">
+      <div className="flex flex-col items-center justify-center gap-4 h-full">
+    <TechIcon icon={<FaReact />} color="#61DAFB" label="React" size="40px" />
+    <TechIcon icon={<FaPython />} color="#3776AB" label="Python" size="40px" />
+    <TechIcon icon={<SiCplusplus />} color="#00599C" label="C++" size="40px" />
+    <TechIcon icon={<SiTailwindcss />} color="#06B6D4" label="TailwindCSS" size="40px" />
+    <TechIcon icon={<FaFigma />} color="#F24E1E" label="Figma" size="40px" />
+    <TechIcon icon={<FaGit />} color="#F05033" label="Git" size="40px" />
+    <TechIcon icon={<SiJavascript />} color="#F7DF1E" label="JavaScript" size="40px" />
+    <TechIcon icon={<SiTypescript />} color="#3178C6" label="TypeScript" size="40px" />
+  </div>
+</div>
 
 
     </div>
