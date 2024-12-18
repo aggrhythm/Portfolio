@@ -44,11 +44,12 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex lg:flex-row mt-20 mb-20 items-center justify-between bg-black text-white py-10 px-10">
-  <div className="lg:w-[80%] md:w-[90%] sm:w-[90%] w-[90%] lg:ml-8 md:ml-2 sm:ml-2 p-8 border border-white rounded-lg shadow-lg">
+    <div className="min-h-screen w-full flex flex-col lg:flex-row mt-20 mb-20 items-center justify-between bg-black text-white py-10 px-10">
+    {/* About Me Box */}
+    <div className="lg:w-[80%] md:w-[90%] sm:w-full w-full p-8 border border-white rounded-lg shadow-lg">
 
         <h1
-          className="text-4xl font-bold mb-4 cursor-pointer"
+          className="text-4xl  font-bold mb-4 cursor-pointer"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -149,8 +150,8 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center lg:w-[20%] md:w-[30%] sm:w-[20%] gap-4 lg:mr-8 md:mr-2 sm:mr-2 ">
-      <div className="flex flex-col items-center justify-center gap-4 h-full">
+      <div className="w-full flex flex-wrap justify-center gap-4 mt-8 lg:mt-0 lg:w-[20%] lg:flex-col">
+
     <TechIcon icon={<FaReact />} color="#61DAFB" label="React" size="40px" />
     <TechIcon icon={<FaPython />} color="#3776AB" label="Python" size="40px" />
     <TechIcon icon={<SiCplusplus />} color="#00599C" label="C++" size="40px" />
@@ -160,7 +161,6 @@ const AboutMe = () => {
     <TechIcon icon={<SiJavascript />} color="#F7DF1E" label="JavaScript" size="40px" />
     <TechIcon icon={<SiTypescript />} color="#3178C6" label="TypeScript" size="40px" />
   </div>
-</div>
 
 
     </div>

@@ -14,11 +14,11 @@ function App() {
       <Home/>
       <div id="aboutme" classname="bg-black h-[10px]"></div>
       <AboutMe/>
-      <h2 id="history" className="text-5xl text-bg-black font-bold lg:ml-36 md:ml-10 sm:ml-10 ml-10 text-white  scroll-offset ">
+      <h2 id="history" className=" text-4xl md:text-5xl text-bg-black font-bold lg:ml-36 md:ml-10 sm:ml-10 ml-10 text-white  scroll-offset ">
         Experience
       </h2>
      <Timeline/>
-     <h1 id="projects" className="text-5xl text-bg-black ml-40 font-bold mt-28 lg:ml-36 md:ml-10 sm:ml-10 ml-10  text-white scroll-offset " >
+     <h1 id="projects" className="text-4xl md:text-5xl text-bg-black ml-40 font-bold mt-28 lg:ml-36 md:ml-10 sm:ml-10 ml-6  text-white scroll-offset " >
           Projects
         </h1>
      <ProjectsGrid/>
@@ -27,7 +27,7 @@ function App() {
      <footer className="mt-4 mb-4 text-center text-gray-400 text-sm flex flex-col items-center">
   <p>
     Developed & Designed with{" "}
-    <span className="text-pink-500 text-lg inline-block animate-pulse">
+    <span className="text-pink-500 text-xs md:text-lg inline-block animate-pulse">
       🩷
     </span>{" "}
     by{" "}
@@ -35,7 +35,7 @@ function App() {
       href="https://github.com/aggrhythm"
       target="_blank"
       rel="noopener noreferrer"
-      className="font-semibold text-gray-300 hover:text-pink-500 transition-all duration-300"
+      className="font-semibold text-gray-300 text-xs md:text-lg hover:text-pink-500 transition-all duration-300"
     >
       Rhytham Aggarwal
     </a>

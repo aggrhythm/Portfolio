@@ -7,7 +7,7 @@ import DisplayImage from "../assets/display.jpeg";
 const Home = () => {
   return (
     <div
-    id="home"
+      id="home"
       className="h-[90vh] w-full flex items-start text-white bg-cover bg-center pt-6"
       style={{
         backgroundImage: `url(${WaveImage})`,
@@ -15,14 +15,16 @@ const Home = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="flex flex-col items-start w-full max-w-4xl sm:ml-20 md:ml-20 lg:ml-48 ml-20 pt-60">
-        <div className="flex flex-col items-start mb-2 ml-40">
-          <div className="flex gap-4">
+      {/* Content Container */}
+      <div className="flex flex-col items-center sm:items-start w-full max-w-4xl px-4 sm:ml-20 md:ml-20 lg:ml-48 ml-0 pt-40 sm:pt-60">
+        {/* Social Icons */}
+        <div className="flex flex-col items-center sm:ml-40 sm:items-start mb-2">
+          <div className="flex gap-4 mb-4 sm:mb-2">
             <a
               href="https://github.com/aggrhythm"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-pink-500 text-3xl"
+              className="text-white hover:text-pink-500 text-2xl sm:text-3xl"
             >
               <FaGithub />
             </a>
@@ -30,14 +32,17 @@ const Home = () => {
               href="https://www.linkedin.com/in/rhytham-aggarwal-679821250/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-pink-500 text-3xl hover:cursor-pointer"
+              className="text-white hover:text-pink-500 text-2xl sm:text-3xl"
             >
               <FaLinkedin />
             </a>
           </div>
         </div>
-        <div className="flex items-center gap-8">
-          <div className="rounded-full mt-3 overflow-hidden w-32 h-32">
+
+        {/* Profile Image and Intro */}
+        <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 text-center sm:text-left">
+          {/* Profile Image */}
+          <div className="rounded-full overflow-hidden w-24 h-24 sm:w-32 sm:h-32">
             <img
               src={DisplayImage}
               alt="Profile"
@@ -45,11 +50,13 @@ const Home = () => {
             />
           </div>
 
-  
+          {/* Intro Text */}
           <div>
-            <h1 className="lg:text-6xl md:text-4xl text-3xl sm:text-4xl font-bold">Rhytham Aggarwal</h1>
-            <p className="lg:text-4xl text-2xl md:text-2xl sm:text-2xl mt-4">
-              <span style={{ color: "white"}}>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+              Rhytham Aggarwal
+            </h1>
+            <p className="text-xl sm:text-2xl lg:text-4xl mt-2 sm:mt-4">
+              <span style={{ color: "white" }}>
                 <Typewriter
                   words={[
                     "Web Developer",
