@@ -24,7 +24,7 @@ const Home = () => {
               href="https://github.com/aggrhythm"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-pink-500 text-2xl sm:text-3xl"
+              className="text-white hover:text-pink-500 text-3xl"
             >
               <FaGithub />
             </a>
@@ -32,7 +32,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/rhytham-aggarwal-679821250/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-pink-500 text-2xl sm:text-3xl"
+              className="text-white hover:text-pink-500 text-3xl"
             >
               <FaLinkedin />
             </a>
@@ -52,10 +52,10 @@ const Home = () => {
 
           {/* Intro Text */}
           <div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
               Rhytham Aggarwal
             </h1>
-            <p className="text-xl sm:text-2xl lg:text-4xl mt-2 sm:mt-4">
+            <p className="text-2xl sm:text-2xl lg:text-4xl mt-2 sm:mt-4">
               <span style={{ color: "white" }}>
                 <Typewriter
                   words={[
