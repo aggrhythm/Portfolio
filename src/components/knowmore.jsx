@@ -5,18 +5,17 @@ import { useInView } from 'react-intersection-observer';
 import photo from "../assets/resized_image.png";
 
 const KnowMore = () => {
-  const { ref: leftRef, inView: leftVisible } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const { ref: rightRef, inView: rightVisible } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref: leftRef, inView: leftVisible } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { ref: rightRef, inView: rightVisible } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section className="bg-black text-white py-10 px-6 md:px-20">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row mt-4 mb-16 items-center gap-6 md:gap-0 relative">
-
-
         <div
           ref={leftRef}
-          className={`relative md:w-[60%] lg:w-[48%] mt-20 md:mt-0 ml-0 lg:ml-20 md:-mr-20 z-20 transition-transform duration-700 ${leftVisible ? 'animate-fade-in-left' : 'translate-x-[-100%] opacity-0'
-            }`}
+          className={`relative w-full md:w-[60%] lg:w-[48%] mt-20 md:mt-0 ml-0 lg:ml-20 md:-mr-20 z-20 transition-transform duration-700 ${
+            leftVisible ? 'animate-fade-in-left' : 'translate-x-0 opacity-100'
+          }`}
         >
           <p className="text-white text-sm absolute left-0 -top-16 md:top-0 md:relative hover:text-pink-500 transition duration-300">
             More About Me
@@ -25,10 +24,8 @@ const KnowMore = () => {
             Know More
           </h3>
           <div
-            className={`p-6 md:p-8  rounded-lg shadow-lg z-10 mt-16 md:mt-10 relative transition-transform duration-300 ${window.innerWidth < 768 ? '' : 'bg-gray-900'
-              }`}
+            className={`p-6 md:p-8 rounded-lg shadow-lg z-10 mt-16 md:mt-10 relative bg-gray-900`}
           >
-
             <div
               className="absolute inset-0 md:hidden rounded-lg"
               style={{
@@ -47,7 +44,7 @@ const KnowMore = () => {
             <div className="absolute inset-0 bg-pink-500 opacity-20 md:hidden rounded-lg"></div>
 
             <div className="relative z-10">
-              <p className="text-gray-300 text-sm leading-relaxed hover:text-gray-100 transition duration-300  p-4 rounded-lg md:bg-transparent">
+              <p className="text-gray-300 text-sm leading-relaxed hover:text-gray-100 transition duration-300 p-4 rounded-lg md:bg-transparent">
                 Apart from my professional engagements, I love exploring new cafes, traveling to undiscovered places, and writing poems. When not coding, you'll find me binge-watching web shows or listening to music.
               </p>
 
@@ -60,8 +57,6 @@ const KnowMore = () => {
                 </ul>
               </div>
             </div>
-
-
 
             <div className="flex gap-4 text-center mt-6">
               <a
@@ -110,8 +105,9 @@ const KnowMore = () => {
 
         <div
           ref={rightRef}
-          className={`hidden md:block md:w-[50%] lg:w-[40%] mt-20 relative z-0 transition-transform duration-700 ${rightVisible ? 'animate-fade-in-right' : 'translate-x-[100%] opacity-0'
-            }`}
+          className={`hidden md:block md:w-[50%] lg:w-[40%] mt-20 relative z-0 transition-transform duration-700 ${
+            rightVisible ? 'animate-fade-in-right' : 'translate-x-[100%] opacity-0'
+          }`}
         >
           <div className="relative group">
             <img
@@ -121,15 +117,6 @@ const KnowMore = () => {
             />
             <div className="absolute inset-0 bg-pink-500 opacity-30 group-hover:opacity-0 transition-opacity duration-500 rounded-lg"></div>
           </div>
-        </div>
-      </div>
-
-      <div className="text-center">
-        <div className="flex justify-center gap-6 text-gray-400 lg:mb-0 mb-10 text-md flex-wrap">
-          <span className="hover:text-pink-500 transition duration-300 hover:text-lg">Eat</span>
-          <span className="hover:text-pink-500 transition duration-300 hover:text-lg">Code</span>
-          <span className="hover:text-pink-500 transition duration-300 hover:text-lg">Sleep</span>
-          <span className="hover:text-pink-500 transition duration-300 hover:text-lg">Repeat</span>
         </div>
       </div>
     </section>
