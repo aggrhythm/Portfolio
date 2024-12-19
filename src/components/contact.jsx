@@ -14,7 +14,7 @@ const Contact = () => {
       <h4 className="text-pink-500 text-lg tracking-widest mb-4 uppercase">
         Let’s Connect
       </h4>
-      <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+      <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
         Get In Touch
       </h1>
       <p className="text-center max-w-2xl mb-10 px-4 text-gray-400 text-lg leading-relaxed">

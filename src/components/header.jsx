@@ -76,14 +76,14 @@ const Header = () => {
     
       {isMenuOpen && (
        <div className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-md z-40">
-       <div className="fixed top-0 right-0 h-screen w-4/5 sm:w-2/5 w-2/5 bg-black text-white z-50 shadow-lg">
+       <div className="fixed top-0 right-0 h-screen w-2/5 bg-black text-white z-50 shadow-lg">
          <div className="flex flex-col justify-start items-start p-8 space-y-6">
            <button
              onClick={toggleMenu}
-             className="absolute top-6 right-6 text-white hover:text-pink-500 transition duration-300"
+             className="absolute top-8 sm:top-6 right-6 text-white hover:text-pink-500 transition duration-300"
            >
              <svg
-               className="w-8 h-8"
+               className="w-6 h-6 sm:w-8 sm:h-8"
                fill="none"
                stroke="currentColor"
                viewBox="0 0 24 24"
@@ -100,28 +100,28 @@ const Header = () => {
            <nav className="flex flex-col space-y-6 text-left">
              <a
                href="#aboutme"
-               className="text-lg text-gray-300 hover:text-pink-500 transition duration-300"
+               className="text-md sm:text-lg text-gray-300 hover:text-pink-500 transition duration-300"
                onClick={toggleMenu}
              >
                About
              </a>
              <a
                href="#history"
-               className="text-lg text-gray-300 hover:text-pink-500 transition duration-300"
+               className="text-md sm:text-lg  text-gray-300 hover:text-pink-500 transition duration-300"
                onClick={toggleMenu}
              >
                Experience
              </a>
              <a
                href="#projects"
-               className="text-lg text-gray-300 hover:text-pink-500 transition duration-300"
+               className="text-md sm:text-lg text-gray-300 hover:text-pink-500 transition duration-300"
                onClick={toggleMenu}
              >
                Projects
              </a>
              <a
                href="#contact"
-               className="text-lg text-gray-300 hover:text-pink-500 transition duration-300"
+               className="text-md sm:text-lg  text-gray-300 hover:text-pink-500 transition duration-300"
                onClick={toggleMenu}
              >
                Contact
@@ -130,7 +130,7 @@ const Header = () => {
                href="https://drive.google.com/file/d/1Hr96oEyUoZAQpRiQdCSkic3VVmzMCxUY/view?usp=sharing"
                target="_blank"
                rel="noopener noreferrer"
-               className="block text-center text-pink-500 border-2 border-pink-500 px-6 py-2 rounded-md hover:bg-pink-500 hover:text-black transition duration-300"
+               className="block text-center text-pink-500  border-2 border-pink-500 px-2 sm:px-6 py-2 rounded-md hover:bg-pink-500 hover:text-black transition duration-300"
                onClick={toggleMenu}
              >
                Resume

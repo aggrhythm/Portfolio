@@ -49,21 +49,21 @@ const AboutMe = () => {
     <div className="lg:w-[80%] md:w-[90%] sm:w-full w-full p-8 border border-white rounded-lg shadow-lg">
 
         <h1
-          className="text-4xl  font-bold mb-4 cursor-pointer"
+          className="text-2xl sm:text-4xl  font-bold mb-4 cursor-pointer"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           {headingText}
         </h1>
 
-        <p className="text-md text-pink-500">
+        <p className="text-sm sm:text-md text-pink-500">
           B.Tech in Computer Science Engineering from{" "}
           <span>Delhi Technological University |  2022-2026</span>
         </p>
-        <p className="text-md mb-8 text-gray-200">
+        <p className="text-sm sm:text-md mb-8 text-gray-200">
           I'm a CSE undergrad with a passion for crafting dynamic websites and diving deep into the world of machine learning. Alongside this, I'm sharpening my problem-solving skills in data structures and algorithms, mainly in C++. Hackathons? Count me in. Networking? I’m all for it. On the right, you'll find the tech stack I'm fluent in.
           <br />
-          <p className="text-md mt-2 text-gray-500 font-bold italic border-l-4 border-pink-500 pl-4">
+          <p className="text-sm sm:text-md mt-2 text-gray-500 font-bold italic border-l-4 border-pink-500 pl-4">
             "I code, I solve, I innovate – and yes, I probably broke something along the
             way."
           </p>
@@ -71,7 +71,7 @@ const AboutMe = () => {
 
 
         <div>
-          <h2 className="text-3xl mb-6 border-b border-gray-400 pb-2">Academic Achievements</h2>
+          <h2 className="text-xl sm:text-3xl mb-6 border-b border-gray-400 pb-2">Academic Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <AchievementCard
               title="Upcoming SWE Intern at Microsoft"
@@ -150,7 +150,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-wrap justify-center gap-4 mt-8 lg:mt-0 lg:w-[20%] lg:flex-col">
+      <div className="w-full flex flex-wrap justify-center gap-2 sm:gap-4 mt-8 lg:mt-0 lg:w-[20%] lg:flex-col">
 
     <TechIcon icon={<FaReact />} color="#61DAFB" label="React" size="40px" />
     <TechIcon icon={<FaPython />} color="#3776AB" label="Python" size="40px" />
@@ -170,18 +170,18 @@ const AboutMe = () => {
 const AchievementCard = ({ title, description, onSeeMore }) => {
   return (
     <div
-      className="p-4 bg-gray-900 border border-gray-600 rounded-lg 
+      className="p-2 sm:p-4 bg-gray-900 border border-gray-600 rounded-lg 
       transition-all duration-300 cursor-pointer 
       hover:translate-x-[-8px] hover:translate-y-[-8px] hover:bg-black
       hover:border-pink-500 group "
     >
-      <h3 className="text-xl font-semibold text-gray-300 group-hover:text-pink-500">
+      <h3 className="text-sm sm:text-xl font-semibold text-gray-300 group-hover:text-pink-500">
         {title}
       </h3>
-      <p className="text-md text-gray-300 mt-2">{description}</p>
+      <p className="text-xs sm:text-md text-gray-300 mt-2">{description}</p>
       <button
         onClick={onSeeMore}
-        className="mt-2 text-sm text-gray-500 hover:underline"
+        className="mt-2 text-xs sm:text-sm text-gray-500 hover:underline"
       >
         Click to know more
       </button>
