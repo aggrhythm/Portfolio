@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaReact, FaPython, FaGit, FaFigma } from "react-icons/fa";
 import { SiCplusplus, SiTailwindcss, SiJavascript, SiTypescript } from "react-icons/si";
 import Popup from "./popup";
 import image1 from "../assets/hive_logo.png"
-import image2 from "../assets/mslogo.png"
+import image2 from "../assets/shefi_logo.jpg"
 import image3 from "../assets/googlelogo.webp"
 import image4 from "../assets/amazonlogo.webp"
 import image5 from "../assets/leetcodelogo.webp"
@@ -12,7 +12,8 @@ import image6 from "../assets/ieeelogo.webp"
 
 const AboutMe = () => {
   const [headingText, setHeadingText] = useState("About Me");
-
+  const [showIcons, setShowIcons] = useState(false); 
+  const aboutMeRef = useRef(null);
   const handleMouseEnter = () => {
     setHeadingText("Still exploring myself :))");
   };
@@ -42,10 +43,32 @@ const AboutMe = () => {
   const closePopup = () => {
     setPopupData({ ...popupData, isOpen: false });
   };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setShowIcons(true); 
+        }
+      },
+      {
+        threshold: 0.5, 
+      }
+    );
+
+    if (aboutMeRef.current) {
+      observer.observe(aboutMeRef.current);
+    }
+
+    return () => {
+      if (aboutMeRef.current) {
+        observer.unobserve(aboutMeRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div className="min-h-screen w-full flex flex-col lg:flex-row mt-20 mb-20 items-center justify-between bg-black text-white py-10 px-10">
-    {/* About Me Box */}
+    <div ref={aboutMeRef} className="min-h-screen w-full flex flex-col lg:flex-row mt-20 mb-20 items-center justify-between bg-black text-white py-10 px-10">    
     <div className="lg:w-[80%] md:w-[90%] sm:w-full w-full p-8 border border-white rounded-lg shadow-lg">
 
         <h1
@@ -73,17 +96,6 @@ const AboutMe = () => {
         <div>
           <h2 className="text-xl sm:text-3xl mb-6 border-b border-gray-400 pb-2">Academic Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <AchievementCard
-              title="Upcoming SWE Intern at Microsoft"
-              description="Summer 2025"
-              onSeeMore={() =>
-                openPopup(
-                  "Upcoming SWE Intern at Microsoft",
-                  image2,
-                  "I received a Software Engineering Internship offer from Microsoft after successfully navigating through multiple rigorous rounds of their selection process. The required tech stack primarily included Data Structures and Algorithms, along with core CS fundamentals such as OOPs, DBMS, and OS. The process began with an online assessment that tested my problem-solving skills. This was followed by the first interview round, where I was asked DSA questions and had a detailed discussion about my resume. The final round involved another interview that focused on advanced DSA problems and C++ fundamentals."
-                )
-              }
-            />
             <AchievementCard
               title="Google Girl Hackathon ‘24 Finalist"
               description="Top 45 among 34,000+ participants"
@@ -135,7 +147,18 @@ const AboutMe = () => {
                 openPopup(
                   "DSA Achievements",
                   image5,
-                  "I have solved over 600 questions in DSA using C++, showcasing my problem-solving skills and deep understanding of data structures and algorithms. Actively involved in competitive programming, I participate in contests on platforms like CodeChef, CodeForces, and LeetCode. My efforts have been recognized with significant global rankings, such as achieving rank 91 in the LeetCode Starters 156 contest, which had over 30,000 participants. This experience has helped me enhance my problem-solving abilities and stay competitive in the global programming community."
+                  "I have solved over 600 questions in DSA using C++, showcasing my problem-solving skills and deep understanding of data structures and algorithms. Actively involved in competitive programming, I participate in contests on platforms like CodeChef, CodeForces, and LeetCode. My efforts have been recognized with significant global rankings, such as achieving rank 91 in the LeetCode Starters 156 contest, which had over 30,000 participants."
+                )
+              }
+            />
+               <AchievementCard
+              title="Shefi Scholar"
+              description="Full scholarship of $800 to join the SheFi Scholars Program!"
+              onSeeMore={() =>
+                openPopup(
+                  "Shefi Scholar",
+                  image2,
+                  "I received a full scholarship to join the SheFi Scholars Program, powered by Celo. This program was all about empowering women in Web3. As a SheFi Scholar, I dived deeper into Web3 concepts, sharing my learning journey, and contributing to this incredible community by spreading awareness and building my personal brand in the decentralized world."
                 )
               }
             />
@@ -150,17 +173,19 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
+     
       <div className="w-full flex flex-wrap justify-center gap-2 sm:gap-4 mt-8 lg:mt-0 lg:w-[20%] lg:flex-col">
+  <TechIcon icon={<FaReact />} color="#61DAFB" label="React" size="40px" show={showIcons} delay="0s" />
+  <TechIcon icon={<FaPython />} color="#3776AB" label="Python" size="40px" show={showIcons} delay="0.2s" />
+  <TechIcon icon={<SiCplusplus />} color="#00599C" label="C++" size="40px" show={showIcons} delay="0.4s" />
+  <TechIcon icon={<SiTailwindcss />} color="#06B6D4" label="TailwindCSS" size="40px" show={showIcons} delay="0.6s" />
+  <TechIcon icon={<FaFigma />} color="#F24E1E" label="Figma" size="40px" show={showIcons} delay="0.8s" />
+  <TechIcon icon={<FaGit />} color="#F05033" label="Git" size="40px" show={showIcons} delay="1s" />
+  <TechIcon icon={<SiJavascript />} color="#F7DF1E" label="JavaScript" size="40px" show={showIcons} delay="1.2s" />
+  <TechIcon icon={<SiTypescript />} color="#3178C6" label="TypeScript" size="40px" show={showIcons} delay="1.4s" />
+</div>
 
-    <TechIcon icon={<FaReact />} color="#61DAFB" label="React" size="40px" />
-    <TechIcon icon={<FaPython />} color="#3776AB" label="Python" size="40px" />
-    <TechIcon icon={<SiCplusplus />} color="#00599C" label="C++" size="40px" />
-    <TechIcon icon={<SiTailwindcss />} color="#06B6D4" label="TailwindCSS" size="40px" />
-    <TechIcon icon={<FaFigma />} color="#F24E1E" label="Figma" size="40px" />
-    <TechIcon icon={<FaGit />} color="#F05033" label="Git" size="40px" />
-    <TechIcon icon={<SiJavascript />} color="#F7DF1E" label="JavaScript" size="40px" />
-    <TechIcon icon={<SiTypescript />} color="#3178C6" label="TypeScript" size="40px" />
-  </div>
+
 
 
     </div>
@@ -189,10 +214,14 @@ const AchievementCard = ({ title, description, onSeeMore }) => {
   );
 };
 
-
-const TechIcon = ({ icon, color, label, size }) => {
+const TechIcon = ({ icon, color, label, size, show, delay }) => {
   return (
-    <div className="flex flex-col items-center text-center cursor-pointer group">
+    <div
+      className={`flex flex-col items-center text-center cursor-pointer group ${show ? `animate-fadeIn` : ''}`}
+      style={{
+        animationDelay: delay, 
+      }}
+    >
       <div
         className="transition-all duration-300"
         style={{
@@ -209,9 +238,7 @@ const TechIcon = ({ icon, color, label, size }) => {
           {icon}
         </span>
       </div>
-      <div
-        className="text-sm mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300"
-      >
+      <div className="text-sm mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
         <span className="bg-black text-gray-100 px-2 py-1 rounded">
           {label}
         </span>
@@ -219,6 +246,7 @@ const TechIcon = ({ icon, color, label, size }) => {
     </div>
   );
 };
+
 
 
 

@@ -5,7 +5,6 @@ import image3 from "../assets/tutortank.png";
 import image4 from "../assets/deeptraceimg.png";
 import image5 from "../assets/cloverimg.png";
 import image6 from "../assets/delishdinehubimg.png";
-
 const projects = [
   {
     id: 1,
@@ -122,8 +121,6 @@ const ProjectsGrid = () => {
     </div>
   );
 };
-
-
 
 export default ProjectsGrid;
 
