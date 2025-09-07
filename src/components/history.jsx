@@ -3,6 +3,13 @@ import { MapPinIcon } from "@heroicons/react/24/solid";
 
 const experiences = [
   {
+    role: "Software Engineering Intern",
+    location: "Microsoft, India",
+    duration: "May 2025 - July 2025",
+    description:
+      "I built intelligent agents using C#, KQL, Azure DevOps, Microsoft Bot Framework, and Graph API to automate reporting workflows, cutting manual efforts. I also engineered scalable log-processing agents handling 50K+ entries/day and implemented customized ticketing templates to accelerate incident resolution.",
+  },
+  {
     role: "Technical Intern",
     location: "Tese, Hong Kong",
     duration: "September 2024 - Present",
